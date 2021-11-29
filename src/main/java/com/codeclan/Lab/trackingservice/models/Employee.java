@@ -1,9 +1,20 @@
 package com.codeclan.Lab.trackingservice.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="employees")
 public class Employee {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
+    private Long id;
+    @Column(name="name")
     private String name;
+    @Column(name="age")
     private int age;
+    @Column(name="employee_number")
     private int employeeNumber;
     private String email;
 
